@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/llBilangan1"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBilangan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Bilangan 1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="103dp" />
+
+        <EditText
+            android:id="@+id/etBilangan1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBilangan1"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llBilangan2"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llBilangan1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBilangan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Bilangan 2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="103dp" />
+
+        <EditText
+            android:id="@+id/etBilangan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBilangan2"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llBilangan2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purple_200"
+        android:text="Cek"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text=""
+        android:layout_below="@id/buttonCek"/>
+</RelativeLayout>

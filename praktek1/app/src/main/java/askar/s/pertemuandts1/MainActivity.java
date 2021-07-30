@@ -1,5 +1,6 @@
 package askar.s.pertemuandts1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextJari;
     TextView textViewKeliling;
     TextView textViewLuas;
-    Button buttonHitung;
+    Button buttonHitung, buttonNext;
     float  inputJarijari;
     double keliling;
     double luas;
@@ -27,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
         textViewKeliling = findViewById(R.id.textViewKeliling);
         textViewLuas = findViewById(R.id.textViewLuas);
         buttonHitung = findViewById(R.id.buttonHitung);
+        buttonNext = findViewById(R.id.buttonNext);
 
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
 
         buttonHitung.setOnClickListener(new View.OnClickListener() {
             @Override
